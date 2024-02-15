@@ -1,0 +1,30 @@
+.wrapper {
+    position: sticky;
+    height: 70px;
+    display: flex;
+    padding: 10px;
+    background-color: #000;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1420px;
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 100px;
+            background-color: #e28629;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease 0s;
+            &:hover {
+                background-color: #ff8000;
+            }
+        }
+    }
+}

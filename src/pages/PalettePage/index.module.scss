@@ -1,0 +1,83 @@
+.container {
+    max-width: 1430px;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .title {
+        font-size: 40px;
+        padding-bottom: 70px;
+        font-weight: 600;
+    }
+    .block {
+        padding-bottom: 30px;
+        .yourTitle {
+            font-size: 30px;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+        .filler {
+            text-align: center;
+            font-size: 20px;
+        }
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .colorContainer {
+                position: relative;
+                .color {
+                    height: 50px;
+                    border-radius: 8px;
+                }
+                .close {
+                    width: 22px;
+                    position: absolute;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 2px;
+                    right: 2px;
+                    height: 22px;
+                    transition: all 0.3s ease 0s;
+                    opacity: 0;
+                    z-index: 2;
+                    visibility: hidden;
+                    cursor: pointer;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                &:hover {
+                    .close {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    .add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 200px;
+        border-radius: 8px;
+        font-size: 16px;
+        border: 1px solid #000;
+        background-color: #fdb154;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            background-color: #fa9a24;
+        }
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}

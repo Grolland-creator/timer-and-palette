@@ -1,0 +1,66 @@
+.modalWrapper {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+    z-index: 6;
+    .blur {
+        position: fixed;
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 6;
+        background: rgba(20, 20, 20, 0.85);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+    }
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        .blur {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .modal {
+        position: relative;
+        z-index: 7;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        .currentColor {
+            height: 50px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .close {
+            width: 22px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -20px;
+            right: -20px;
+            height: 22px;
+            transition: all 0.3s ease 0s;
+            z-index: 2;
+            cursor: pointer;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
